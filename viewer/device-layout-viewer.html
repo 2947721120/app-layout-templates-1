@@ -8,8 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../../iron-flex-layout/iron-flex-layout-classes.html">
+<!--<link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">-->
 <link rel="import" href="../../iron-icon/iron-icon.html">
 <link rel="import" href="../../iron-icons/iron-icons.html">
 <link rel="import" href="../../iron-icons/hardware-icons.html">
@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="device-view.html">
 
 <!--
-Displays a page on different device layouts.
+显示不同设备布局的页面.
 
     <device-layout-viewer device="phone" sources='[
       {"name":"Polymer Project","src":"https://www.polymer-project.org/"}
@@ -50,12 +50,12 @@ Displays a page on different device layouts.
 
     <div class="sidebar" hidden$="{{hideSidebar}}">
 
-      <h4>Application</h4>
+      <h4>应用</h4>
       <select id="select" on-change="_selectChange"></select>
 
-      <a href="{{source.github}}" target="_blank" hidden$="{{!source.github}}"><h4>Github Link</h4></a>
+      <a href="{{source.github}}" target="_blank" hidden$="{{!source.github}}"><h4>Github</h4></a>
 
-      <h4>Device View</h4>
+      <h4>设备视图</h4>
       <iron-selector class="device-select" selected="{{device}}" selected-item="{{deviceIcon}}"
           attr-for-selected="name" show-all$="{{showAll}}" on-iron-activate="_onIconActivate">
         <iron-icon name="phone" title="Phone" icon="hardware:phone-iphone"></iron-icon>
@@ -63,7 +63,7 @@ Displays a page on different device layouts.
         <iron-icon name="laptop" title="Laptop" icon="hardware:laptop" class="no-landscape"></iron-icon>
       </iron-selector>
 
-      <h4>Show All Views</h4>
+      <h4>显示全部视图s</h4>
       <paper-toggle-button checked="{{showAll}}"></paper-toggle-button>
 
     </div>
@@ -79,7 +79,7 @@ Displays a page on different device layouts.
       properties: {
 
         /**
-         * An array of objects describing the sources.
+         * 描述源的一组对象。
          *
          *     sources = [
          *       {name: 'Polymer Project', src: 'https://www.polymer-project.org/'},
@@ -92,7 +92,7 @@ Displays a page on different device layouts.
         },
 
         /**
-         * The device layout to show.  Possible values are `phone`, `tablet` and `laptop`.
+         * 要显示的设备布局。 可能的值是“手机”，“平板电脑”和“笔记本电脑”。
          */
         device: {
           type: String,
@@ -100,7 +100,7 @@ Displays a page on different device layouts.
         },
 
         /**
-         * Show all device layouts together.
+         * 一起显示所有设备布局。
          */
         showAll: {
           type: Boolean,
@@ -108,7 +108,7 @@ Displays a page on different device layouts.
         },
 
         /**
-         * Hides the sidebar.
+         *隐藏侧边栏
          */
         hideSidebar: Boolean
 
@@ -135,7 +135,7 @@ Displays a page on different device layouts.
       },
 
       /**
-       * Toggles the landscape orientation of the current device.
+       *切换当前设备的横向。
        */
       toggleLandscape: function() {
         this.deviceIcon.classList.toggle('landscape');

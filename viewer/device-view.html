@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../../polymer/polymer.html">
 
 <!--
-Displays a page on a device layout.
+显示设备布局上的页面。
 
     <device-view device="phone" src="https://www.polymer-project.org/"></device-view>
 
@@ -35,12 +35,12 @@ Displays a page on a device layout.
       properties: {
 
         /**
-         * The url of the page to show.
+         *页面的网址显示.
          */
         src: String,
 
         /**
-         * The device layout to show.  Possible values are `phone`, `tablet` and `laptop`.
+         *要显示的设备布局。 可能的值是`phone`, `tablet`  图 `laptop`.
          */
         device: {
           type: String,
@@ -49,7 +49,7 @@ Displays a page on a device layout.
         },
 
         /**
-         * Use landscape orientaion if this is true.
+         *如果是，则使用横向。
          */
         landscape: {
           type: Boolean,
@@ -60,7 +60,7 @@ Displays a page on a device layout.
       },
 
       /**
-       * Toggles the landscape orientation.
+       * 切换横向.
        */
       toggleLandscape: function() {
         this.landscape = !this.landscape;
